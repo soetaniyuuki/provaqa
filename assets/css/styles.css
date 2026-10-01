@@ -1,0 +1,551 @@
+/* Kaffa Tech Travel - Stylesheet */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: linear-gradient(135deg, #F7941D 0%, #FF8C00 100%);
+    --secondary: linear-gradient(135deg, #FFB84D 0%, #F7941D 100%);
+    --accent: #F7941D;
+    --dark: #1A1F2E;
+    --light: #f8f9fa;
+    --glass: rgba(255, 255, 255, 0.1);
+    --orange-main: #F7941D;
+    --orange-dark: #E67E00;
+    --orange-light: #FFB84D;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1A1F2E 0%, #2C3E50 100%);
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+    padding-top: 90px;
+}
+
+header {
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 1.5rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    background: linear-gradient(135deg, #F7941D, #FFB84D, #FF8C00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+nav {
+    background: transparent;
+    padding: 1.5rem 0;
+    margin-bottom: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.7rem 1.8rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    background: transparent;
+    border: 2px solid transparent;
+}
+
+nav a:hover {
+    background: rgba(247, 148, 29, 0.15);
+    border-color: rgba(247, 148, 29, 0.3);
+    transform: translateY(-2px);
+}
+
+nav a.active {
+    background: var(--primary);
+    box-shadow: 0 4px 12px rgba(247, 148, 29, 0.3);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.banner {
+    position: relative;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 2rem 0;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.banner a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-decoration: none;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.banner:hover img {
+    transform: scale(1.05);
+}
+
+.banner-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 3rem 2rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.4), transparent);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.banner-overlay h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #F7941D;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.banner-overlay p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin: 0;
+    opacity: 0.95;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.banner:hover .banner-overlay {
+    padding-bottom: 3.5rem;
+}
+
+section {
+    margin: 4rem 0;
+    animation: fadeInUp 0.6s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, #fff, #F7941D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 45px rgba(247, 148, 29, 0.3);
+    border-color: rgba(247, 148, 29, 0.5);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    color: #F7941D;
+    margin-bottom: 0.5rem;
+}
+
+#sobre {
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 3rem;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+#sobre p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+#sobre a {
+    color: #F7941D;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 0.3rem 0.8rem;
+    border-radius: 5px;
+}
+
+#sobre a:hover {
+    background: rgba(247, 148, 29, 0.1);
+    transform: translateX(5px);
+    display: inline-block;
+}
+
+form {
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+label {
+    color: #F7941D;
+    font-weight: 600;
+    margin-bottom: -1rem;
+}
+
+input, textarea {
+    background: rgba(255,255,255,0.05);
+    border: 2px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 1rem;
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #F7941D;
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 0 20px rgba(247, 148, 29, 0.2);
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+button {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(247, 148, 29, 0.3);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(247, 148, 29, 0.5);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#resultadoOrcamento {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #F7941D;
+    font-weight: 700;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#voltarAoTopo {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 5px 20px rgba(247, 148, 29, 0.4);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+#voltarAoTopo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(247, 148, 29, 0.6);
+}
+
+footer {
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+footer a {
+    color: #F7941D;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.depoimento-card {
+    position: relative;
+}
+
+.depoimento-card::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    font-size: 4rem;
+    color: #F7941D;
+    opacity: 0.3;
+    font-family: 'Playfair Display', serif;
+}
+
+.intro-text {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.valores-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.valores-list li {
+    background: var(--glass);
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 10px;
+    border-left: 4px solid var(--accent);
+}
+
+.destino-destaques {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.destino-destaques li {
+    padding: 0.3rem 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.rating {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.contato-wrapper {
+    display: flex;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.contato-info,
+.contato-form {
+    flex: 1;
+}
+
+.contato-info {
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+.contato-info h3 {
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+}
+
+.info-item {
+    margin-bottom: 1.5rem;
+}
+
+.info-item strong {
+    color: var(--accent);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.info-item p {
+    margin: 0;
+    opacity: 0.9;
+}
+
+select {
+    background: rgba(255,255,255,0.05);
+    border: 2px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 1rem;
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+select:focus {
+    outline: none;
+    border-color: #F7941D;
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 0 20px rgba(247, 148, 29, 0.2);
+}
+
+select option {
+    background: var(--dark);
+    color: #fff;
+}
+
+.data-noticia {
+    color: var(--accent);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.aviso-card {
+    border-left: 4px solid #dc3545;
+    background: rgba(220, 53, 69, 0.05) !important;
+}
+
+.aviso-card h3 {
+    color: #dc3545;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        gap: 0.3rem;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+
+    nav a {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+        white-space: nowrap;
+    }
+
+    .banner {
+        height: 300px;
+    }
+    
+    .banner-overlay h3 {
+        font-size: 1.8rem;
+    }
+    
+    .banner-overlay p {
+        font-size: 0.95rem;
+    }
+    
+    .banner-overlay {
+        padding: 2rem 1.5rem;
+    }
+    
+    .contato-wrapper {
+        flex-direction: column;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .card {
+        padding: 2.5rem;
+    }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaffa Tech Travel - Seu Destino de Férias</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Kaffa Tech Travel</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+            <li><a href="destinos.html">Destinos</a></li>
+            <li><a href="depoimentos.html">Depoimentos</a></li>
+            <li><a href="noticias.html">Notícias</a></li>
+            <li><a href="contato.html" class="active">Contato</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="contato">
+            <h2>Entre em Contato</h2>
+            <p class="intro-text">Tem dúvidas ou quer planejar sua próxima viagem? Entre em contato conosco!</p>
+            
+            <div class="contato-wrapper">
+                <div class="contato-info">
+                    <h3>Nossos Canais</h3>
+                    <div class="info-item">
+                        <strong>📞 Telefone:</strong>
+                        <p>(11) 3456-789</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>📱 WhatsApp:</strong>
+                        <p>(11) 98765-4321</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>📧 E-mail:</strong>
+                        <p>contatokaffatechtravel.com.br</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>📍 Endereço:</strong>
+                        <p>Av. Paulista, 1000 - São Paulo/SP</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>⏰ Horário de Atendimento:</strong>
+                        <p>Seg a Sex: 9h às 18h<br>Sáb: 9h às 13h</p>
+                    </div>
+                </div>
+
+                <div class="contato-form">
+                    <h3>Envie sua Mensagem</h3>
+                    <form id="contatoForm">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" required placeholder="Seu nome completo">
+                        
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" required placeholder="seu@email.com">
+                        
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" placeholder="(11) 98765-4321">
+                        
+                        <label for="assunto">Assunto:</label>
+                        <select id="assunto">
+                            <option value="">Selecione um assunto</option>
+                            <option value="orcamento">Solicitar Orçamento</option>
+                            <option value="duvida">Dúvidas</option>
+                            <option value="reclamacao">Reclamação</option>
+                            <option value="elogio">Elogio</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                        
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" placeholder="Como podemos ajudar você?"></textarea>
+                        
+                        <button type="submit">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <button id="voltarAoTopo" title="Voltar ao Topo">↑</button>
+
+    <footer>
+        <p>Kaffa Tech Travel &copy; 2024. Todos os direitos reservados.</p>
+        <p>
+            <a href="https://www.noticias.com/viagemfacil-melhor-agencia" target="_blank">Veja nossa página de notícias</a>
+        </p>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "name": "kaffa-tech-travel-qa-cypress",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dois cenários Cypress da calculadora de orçamento (Kaffa Tech Travel)",
+  "scripts": {
+    "serve": "http-server ../.. -a 127.0.0.1 -p 8080 -c-1 --silent",
+    "test:pass": "node scripts/with-server.js --spec cypress/e2e/calculadora-orcamento-valido.cy.js",
+    "test:fail": "node scripts/with-server.js --spec cypress/e2e/calculadora-zero-pessoas.cy.js",
+    "test": "node scripts/with-server.js --spec cypress/e2e/calculadora-orcamento-valido.cy.js,cypress/e2e/calculadora-zero-pessoas.cy.js",
+    "cy:open": "cypress open --e2e"
+  },
+  "devDependencies": {
+    "cypress": "^14.5.4",
+    "http-server": "^14.1.1",
+    "tree-kill": "^1.2.2"
+  }
+}

@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Cypress raw local artifacts (keep selected copies under evidencias-execucao/)
+**/cypress/videos/
+**/cypress/screenshots/
+**/cypress/downloads/
+**/cypress/.cache/
+entrega-qa/automacao/.cache/
+entrega-qa/automacao/.last-clean-validate.txt
+
+# Caches and temp files
+.cache/
+*.log
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+Desktop.ini
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.nyc_output/
+coverage/
+
+# Local env / IDE
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+*.swp
+*~
+
+# Local-only delivery materials (report/manual evidence go by email; planning stays local)
+entrega-qa/relatorio/
+entrega-qa/evidencias/
+entrega-qa/notas/
+entrega-qa/PLANO.md
+entrega-qa/PROMPT_CURSOR_CYPRESS.md
+
+# Selected automation evidence IS published:
+# entrega-qa/automacao/evidencias-execucao/
